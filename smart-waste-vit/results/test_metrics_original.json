@@ -1,0 +1,12 @@
+{
+  "condition": "Original",
+  "accuracy": 0.9256505576208178,
+  "macro_precision": 0.928520931595494,
+  "macro_recall": 0.9217363100131462,
+  "macro_f1": 0.9245679408548472,
+  "hazardous_recall": 0.8983050847457628,
+  "hazardous_fn_rate": 0.10169491525423724,
+  "hazardous_false_negatives": 6,
+  "hazardous_false_positives": 2,
+  "n_hazardous": 59
+}

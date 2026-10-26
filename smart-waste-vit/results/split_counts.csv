@@ -1,0 +1,5 @@
+,train,val,test
+Hazardous,282,62,59
+Non-Recyclable,260,55,55
+Organic,336,71,74
+Recyclable,373,80,81

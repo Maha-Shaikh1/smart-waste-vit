@@ -1,0 +1,5 @@
+subclass,detected,total,recall
+batteries,10,10,1.0
+e-waste,24,27,0.8888888888888888
+paints,9,12,0.75
+pesticides,10,10,1.0

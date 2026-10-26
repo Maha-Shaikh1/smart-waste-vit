@@ -1,0 +1,102 @@
+{
+  "dataset": "huaweilin/waste-classification",
+  "model": "google/vit-base-patch16-224",
+  "seed": 42,
+  "n_raw": 1976,
+  "n_after_cleaning": 1788,
+  "corrupted_removed": 0,
+  "duplicates_removed": 188,
+  "n_train": 1251,
+  "n_val": 268,
+  "n_test": 269,
+  "classes": [
+    "Hazardous",
+    "Non-Recyclable",
+    "Organic",
+    "Recyclable"
+  ],
+  "class_counts": {
+    "Hazardous": 581,
+    "Non-Recyclable": 371,
+    "Organic": 487,
+    "Recyclable": 537
+  },
+  "hyperparameters": {
+    "batch_size": 32,
+    "epochs": 5,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "warmup_steps": 20,
+    "scheduler": "cosine",
+    "fp16": true
+  },
+  "training_minutes": 5.2,
+  "best_validation_macro_f1": 0.9151806091298609,
+  "test_original": {
+    "condition": "Original",
+    "accuracy": 0.9256505576208178,
+    "macro_precision": 0.928520931595494,
+    "macro_recall": 0.9217363100131462,
+    "macro_f1": 0.9245679408548472,
+    "hazardous_recall": 0.8983050847457628,
+    "hazardous_fn_rate": 0.10169491525423724,
+    "hazardous_false_negatives": 6,
+    "hazardous_false_positives": 2,
+    "n_hazardous": 59
+  },
+  "robustness": {
+    "Original": {
+      "accuracy": 0.9256505576208178,
+      "macro_precision": 0.928520931595494,
+      "macro_recall": 0.9217363100131462,
+      "macro_f1": 0.9245679408548472,
+      "hazardous_recall": 0.8983050847457628,
+      "hazardous_fn_rate": 0.10169491525423724,
+      "hazardous_false_negatives": 6.0,
+      "hazardous_false_positives": 2.0,
+      "n_hazardous": 59.0
+    },
+    "Blur (r=2)": {
+      "accuracy": 0.9144981412639405,
+      "macro_precision": 0.9159224250325946,
+      "macro_recall": 0.9127690093791788,
+      "macro_f1": 0.9137295619091195,
+      "hazardous_recall": 0.8983050847457628,
+      "hazardous_fn_rate": 0.10169491525423724,
+      "hazardous_false_negatives": 6.0,
+      "hazardous_false_positives": 6.0,
+      "n_hazardous": 59.0
+    },
+    "Dark (x0.5)": {
+      "accuracy": 0.9033457249070632,
+      "macro_precision": 0.9033381712626996,
+      "macro_recall": 0.9026176664594744,
+      "macro_f1": 0.9026465766710523,
+      "hazardous_recall": 0.9152542372881356,
+      "hazardous_fn_rate": 0.0847457627118644,
+      "hazardous_false_negatives": 5.0,
+      "hazardous_false_positives": 6.0,
+      "n_hazardous": 59.0
+    },
+    "JPEG (q=20)": {
+      "accuracy": 0.9182156133828996,
+      "macro_precision": 0.9209346734817558,
+      "macro_recall": 0.9144126021244666,
+      "macro_f1": 0.9169466312611574,
+      "hazardous_recall": 0.8813559322033898,
+      "hazardous_fn_rate": 0.11864406779661019,
+      "hazardous_false_negatives": 7.0,
+      "hazardous_false_positives": 2.0,
+      "n_hazardous": 59.0
+    }
+  },
+  "hazardous_subclass_recall": {
+    "batteries": 1.0,
+    "e-waste": 0.8889,
+    "paints": 0.75,
+    "pesticides": 1.0
+  },
+  "transformers_version": "5.20.2",
+  "torch_version": "2.11.0+cu130",
+  "gpu": "Tesla T4"
+}

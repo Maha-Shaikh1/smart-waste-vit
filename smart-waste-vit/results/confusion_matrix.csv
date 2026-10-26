@@ -1,0 +1,5 @@
+,Pred Hazardous,Pred Non-Recyclable,Pred Organic,Pred Recyclable
+True Hazardous,53,0,3,3
+True Non-Recyclable,0,49,2,4
+True Organic,0,3,71,0
+True Recyclable,2,1,2,76
